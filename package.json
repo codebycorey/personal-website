@@ -4,6 +4,10 @@
   "description": "Personal Web Development Website",
   "main": "index.js",
   "scripts": {
+    "build-sass": "node-sass --output-style compressed sass/main.scss dist/css/main.css",
+    "watch-sass": "nodemon -e scss -w sass -x 'npm run build-sass'",
+    "build": "npm run build-sass",
+    "watch": "npm run watch-sass",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,9 +15,14 @@
     "url": "git+https://github.com/rcodonnell/personal-website.git"
   },
   "author": "Corey O'Donnell",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rcodonnell/personal-website/issues"
   },
-  "homepage": "https://github.com/rcodonnell/personal-website#readme"
+  "homepage": "https://github.com/rcodonnell/personal-website#readme",
+  "devDependencies": {
+    "lite-server": "^2.2.0",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2"
+  }
 }
