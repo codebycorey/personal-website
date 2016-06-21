@@ -4,10 +4,12 @@
   "description": "Personal Web Development Website",
   "main": "index.js",
   "scripts": {
+    "lite": "lite-server",
     "build-sass": "node-sass --output-style compressed sass/main.scss dist/css/main.css",
     "watch-sass": "nodemon -e scss -w sass -x 'npm run build-sass'",
     "build": "npm run build-sass",
     "watch": "npm run watch-sass",
+    "dev": "concurrently 'npm run watch' 'npm run lite'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
