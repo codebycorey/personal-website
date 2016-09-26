@@ -1,0 +1,23 @@
+/**
+ * Homepage
+ */
+.homepage {
+    height: 100vh;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+
+    background: url('../../assets/spash.jpg') bottom center / cover no-repeat;
+
+    .homepage-content {
+        @include justify-content(center);
+        @include align-items(center);
+
+        @include flexbox();
+        .homepage-header {
+            @include flex(0, 1, auto);
+            color: $grey;
+            text-align: center;
+        }
+    }
+}

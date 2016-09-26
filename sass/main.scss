@@ -1,42 +1,23 @@
-$grey: #292929;
+// Util Styles
+@import 'util/variables';
+@import 'util/layout';
+@import 'util/flexbox';
+@import 'util/fonts';
+
+// Component Styles
+@import 'components/contact';
+@import 'components/homepage';
+
+
 
 html
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.homepage {
-    height: 100vh;
-    display: flex;
-
-    .homepage-left
-    .homepage-right {
-        height: 100%;
-    }
-
-
-    .homepage-left {
-
-        flex-grow: 3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .homepage-header {
-            color: $grey;
-            text-align: center;
-        }
-    }
-
-    .homepage-right {
-        flex-grow: 1;
-        background-color: $grey;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .homepage-contact {
-            flex: 0 1 auto;
-        }
-
-    }
+a {
+    text-decoration: none;
+    color: $lightGrey;
 }
